@@ -1,10 +1,17 @@
 
 <section>
     <table class="tabela">
-        <div *ngFor="let transferencia of transferencias">
-            <p>Valor: {{transferencia?.valor}}</p>
-            <p>Destino: {{transferencia?.destino}}</p>
-            <p>Data: {{transferencia?.data}}</p>
-        </div>
+        <thead>
+            <th>Valor</th>
+            <th>Destino</th>
+            <th>Data</th>
+        </thead>
+        <tbody>
+            <tr class="dados" *ngFor="let transferencia of transferencias">
+                <td>{{transferencia?.valor}}</td>
+                <td>{{transferencia?.destino}}</td>
+                <td>{{transferencia?.data | date: "short"}}</td>
+            </tr>
+        </tbody>
     </table>
 </section>
