@@ -1,5 +1,36 @@
+$black: #000000;
+$green: #008000;
 
 
-.dados{
-    border-bottom: 1px solid rgb(26, 25, 25);
-}
+.tabela{
+    max-width: 1000px;
+    margin: 0 auto;
+    box-shadow: 0 0 8px $black;
+    text-align: center;
+
+    &__head{
+        color: var(--primary);
+
+        &__conteudo{
+            border-bottom: 2px solid $green;
+        }
+    }
+
+    
+    &__linha{
+        margin-bottom:20px;
+        border-radius: 4px;
+
+        &:last-child{
+            .tabela__conteudo{
+                border-bottom: none;
+            }
+        }
+    }
+
+    &__conteudo{
+        padding: 10px;
+        border-bottom: 1px solid var(--primary);
+    }
+
+  }

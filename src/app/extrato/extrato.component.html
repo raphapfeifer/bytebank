@@ -1,16 +1,16 @@
 
 <section>
     <table class="tabela">
-        <thead>
-            <th>Valor</th>
-            <th>Destino</th>
-            <th>Data</th>
+        <thead class="tabela_head head">
+            <th class="tabela__head__conteudo">Valor</th>
+            <th class="tabela__head__conteudo">Destino</th>
+            <th class="tabela__head__conteudo">Data</th>
         </thead>
         <tbody>
-            <tr class="dados" *ngFor="let transferencia of transferencias">
-                <td>{{transferencia?.valor}}</td>
-                <td>{{transferencia?.destino}}</td>
-                <td>{{transferencia?.data | date: "short"}}</td>
+            <tr class="tabela__linha"*ngFor="let transferencia of transferencias">
+                <td class="tabela__conteudo">{{transferencia?.valor | currency}}</td>
+                <td class="tabela__conteudo">{{transferencia?.destino}}</td>
+                <td class="tabela__conteudo">{{transferencia?.data | date: "short"}}</td>
             </tr>
         </tbody>
     </table>
