@@ -1,6 +1,12 @@
 $black: #000000;
 $green: #008000;
 
+%margin-bottom{margin-bottom: 20px;}
+
+.titulo{
+    text-align: center;
+    @extend %margin-bottom;
+}
 
 .tabela{
     max-width: 1000px;
@@ -18,7 +24,7 @@ $green: #008000;
 
     
     &__linha{
-        margin-bottom:20px;
+        @extend %margin-bottom;
         border-radius: 4px;
 
         &:last-child{
